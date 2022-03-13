@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { products } from '../products';
 
 @Component({
@@ -8,9 +8,26 @@ import { products } from '../products';
 })
 export class ProductItemComponent implements OnInit {
   products = products;
-  constructor() { }
+  // @ts-ignore
+  @Input categoryid: number;
+  constructor() { 
+    
+  }
+
+  remove(product: any) {
+
+    product.show = false;
+
+  }
+
+  like(product: any) {
+
+    product.likes += 1;
+
+  }
 
   ngOnInit(): void {
+
   }
 
 }

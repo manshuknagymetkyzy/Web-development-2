@@ -1,21 +1,32 @@
 <div *ngFor="let product of products">
-  <h3>
+  <div *ngIf="product.categoryid == categoryid && product.show">
+    <div>
+    <h3>
+      <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
+        {{ product.name }}
+      </a>
+    </h3>
+  
     <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
-      {{ product.name }}
+      <img src="{{product.image}}" width="300px">
     </a>
-  </h3>
   
-  <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
-    <img src="{{product.image}}" width="300px">
-  </a>
+    <div>
+      <img src="assets/{{product.rating}}" width="150px">  
+    </div>
   
-  <div>
-    <img src="assets/{{product.rating}}" width="150px">  
+    <p *ngIf="product.description">
+      Description: {{ product.description }}
+    </p>
+
+    <div>
+
+      <button (click)="remove(product)">Remove</button>
+      <button (click)="like(product)">Like</button>
+
+    </div>
+    <p>Likes: {{product.likes}}</p>
+    </div>
   </div>
-  
-  <p *ngIf="product.description">
-    Description: {{ product.description }}
-  </p>
-  
 
 </div>

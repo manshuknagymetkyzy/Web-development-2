@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { products } from '../products';
+import {CartService} from '../cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,13 +11,22 @@ import { products } from '../products';
 })
 export class ProductListComponent {
   products = products;
+  public categoryid: number;
+  
 
-  share() {
-    window.alert('The product has been shared!');
+  constructor(private route: ActivatedRoute) { 
+    const routeParams = this.route.snapshot.paramMap;
+
+    this.categoryid = Number(routeParams.get('categoryid'));
   }
 
-  onNotify() {
-    window.alert('You will be notified when the product goes on sale');
+  ngOnInit() {
+
+    const routeParams = this.route.snapshot.paramMap;
+
+    this.categoryid = Number(routeParams.get('categoryid'));
+
+
   }
 }
 
