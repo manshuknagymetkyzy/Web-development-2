@@ -92,11 +92,11 @@ export const products = [
   },
   {
     id: 10,
-    name: 'Apple Pencil (2nd Generation)',
-    price: 119,
-    description: 'A pencil with imperceptible lag, pixel-perfect precision, and tilt and pressure sensitivity',
-    url: 'https://www.amazon.com/Apple-MU8F2AM-A-Pencil-Generation/dp/B07K1WWBJK/ref=lp_17938598011_1_2',
-    image: 'https://m.media-amazon.com/images/I/41S3MKU9TjL._AC_SX522_.jpg',
+    name: 'Wired Mouse for Laptop',
+    price: 19,
+    description: 'Provides Thumb Rest, Ergonomic Design',
+    url: 'https://www.amazon.com/Ergonomic-Computer-4-Level-Compatible-Notebook/dp/B09P7XLF4K/ref=sr_1_32_sspa?qid=1647152490&s=computers-intl-ship&sr=1-32-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFMMUlDWUg2UkhYSTImZW5jcnlwdGVkSWQ9QTA2NDYzNTBKWjJITzcyRk5SM1EmZW5jcnlwdGVkQWRJZD1BMDY1NzE0OTJDN1BaTTNJODRORjYmd2lkZ2V0TmFtZT1zcF9idGZfYnJvd3NlJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==',
+    image: 'https://m.media-amazon.com/images/I/61yBtXUKjpL._AC_SX466_.jpg',
     rating: '5.png'
   }
 ];

@@ -1,7 +1,9 @@
 <h2>Product Details</h2>
 
 <div *ngIf="product">
-  <h3>{{ product.name }}</h3>
+  <a href="{{product.url}}">
+    {{ product.name }}
+  </a>
   <img src="{{product.image}}" width="250px">
   <h4>{{ product.price | currency }}</h4>
   <p>{{ product.description }}</p>
