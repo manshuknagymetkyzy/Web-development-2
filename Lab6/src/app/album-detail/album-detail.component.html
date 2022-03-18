@@ -1,0 +1,15 @@
+<div *ngIf="loaded">
+    <h2>Album Detail #{{album.id}}</h2>
+
+    
+    <fieldset>
+        <input type="text" [(ngModel)]="album.title">
+        <button (click)="updateAlbum()">Save</button>
+    </fieldset><br>
+    <a routerLink="/albums/{{album.id}}/photos">PHOTOS</a><br>
+    
+</div>
+<br>
+<button (click)="goBack()">Return Back</button>
+
+<p *ngIf="!loaded">Loading album...</p>
